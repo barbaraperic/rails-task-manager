@@ -1,0 +1,12 @@
+
+<ul>
+    <li>
+      <% if @task.completed %>
+        <input type = "checkbox" checked>
+      <% else %>
+        <input type = "checkbox">
+      <% end %>
+      <%= @task.title %>
+    </li>
+</ul>
+

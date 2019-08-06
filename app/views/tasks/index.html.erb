@@ -2,14 +2,15 @@
 <p>Find me in app/views/tasks/action.html.erb</p>
 
 <ul>
-  <% @tasks.each do |r| %>
+  <% @tasks.each do |task| %>
     <li>
-      <% if r.completed %>
+      <% if task.completed %>
         <input type = "checkbox" checked>
       <% else %>
         <input type = "checkbox">
       <% end %>
-      <%= r.title %>
+      <%= task.title %>
     </li>
+    <%= link_to 'show', task_path(task)  %>
   <% end %>
 </ul>
